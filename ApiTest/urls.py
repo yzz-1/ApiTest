@@ -21,4 +21,6 @@ from MyApp.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^welcome/$', welcome), #进入主页
+    url(r'home/$', home), #进入首页
+    url(r"^child/(?P<eid>.+)/(?P<oid>.*)/$", child), #返回子页面
 ]
