@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>测试平台登录</title>
@@ -11,31 +11,70 @@
             background-size: contain;
         }
 
-        .jcpt_input{
-            width: 200px;
-            background-color: #fff7ee;
-            border-radius: 10px;
-            text-align: center;
+        .jkpt_input{
+            width: 90%;
+            background-color: #d1d0d1;
+            border-radius: 50px;
+            text-align: left;
             float: right;
             margin-right: 10px;
             height: 30px;
+            border: 0;
+        }
+        span{
+            color: rgba(28, 15, 10, 0.95);
         }
     </style>
+     <script src="/static/201908059658/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
 </head>
 <body>
-    <div style="margin-left: -webkit-calc(50% - 150px);
-                width: 300px;height: 500px;background-color: white;
-                opacity: 0.91;border-radius: 10px;text-align: center">
-        <span style="font-size: xx-large;color: #1e1107">接口测试平台</span>
+    <div style="box-shadow: 4px 4px 6px #2a262a;margin-left: -webkit-calc(50% - 150px);
+    width: 300px;background-color: white; opacity:0.8;border-radius: 20px;text-align: center">
         <br>
-        <span>登录/注册</span>
+        <strong><span style="font-size: xx-large;">接口测试平台</span></strong>
+        <br>
+        <span>欢迎使用</span>
         <br><br>
-        <div style="padding-left: 10px;text-align: left">
-            用户名：<input type="text" class="jkpt_input">
-            <br><br>
-            密码：<input type="text" class="jkpt_input">
-        </div>
+
+            <input id="username" type="text" class="wqrf_input" placeholder="用户名">
+                <br><br>
+            <input id="password" type="text" class="wqrf_input" placeholder="密码">
+
+        <br><br><br>
+        <button onclick="login()" style="width: 90%;height: 35px;border-radius: 50px;background-color: #2e5af0;
+        color: white;font-size: large;border: 0;box-shadow: 4px 4px 4px #a0a0a0">
+            登录
+        </button>
+        <br><br>
+        <span style="font-size: xx-small">若首次登录，请点击<a href="javascript:register()">注册账号</a></span>
+        <br><br>
 
     </div>
+
+
+<script>
+    function register() {
+        username = document.getElementById('username').value;
+        password = document.getElementById('password').value;
+
+        $.get("/register_action/",{
+            "username":username,
+            "password":password
+        },function (ret) {
+            alert(ret)
+    }
+    function login() {
+        username = document.getElementById('username').value;
+        password = document.getElementById('password').value;
+
+        $.get("/login_action/",{
+            "username":username,
+            "password":password
+        },function (ret) {
+            alert('您的用户名密码错误！')
+        })
+    }
+</script>
 </body>
 </html>
