@@ -20,10 +20,14 @@ from MyApp.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^welcome/$', welcome), #进入主页
-    url(r'home/$', home), #进入首页
-    url(r"^child/(?P<eid>.+)/(?P<oid>.*)/$", child), #返回子页面
-    url(r'login/$', login), #进入登录页面
-    url(r'^login_action/$', login_action), #登录
-    url(r'^register_action/$', register_action), #注册
+    url(r'^welcome/$', welcome), # 进入主页
+    url(r'home/$', home), # 进入首页
+    url(r"^child/(?P<eid>.+)/(?P<oid>.*)/$", child), # 返回子页面
+    url(r'login/$', login), # 进入登录页面
+    url(r'^login_action/$', login_action), # 登录
+    url(r'^register_action/$', register_action), # 注册
+    url(r'^accounts/login/$', login), # 非登录状态自动跳转登录页面
+    url(r'logout/$', logout), # 退出
+    url(r'^pei/$', pei), # 匿名吐槽
+    url(r'^help/$', api_help), # 进入帮助文档
 ]

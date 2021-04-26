@@ -12,46 +12,50 @@
 
 <nav id="navbar" class="">
         <ul>
-            <li>
-                <a href="#">
-                    <i class="fa fa-bell-o"></i>
-                    项目管理
-                </a>
-                <ul>
-                    <li>
-                        <a href="#">
-                            项目列表
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            接口库
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/case_list/">
-                            用例库
-                        </a>
-                    </li>
-
-                </ul>
-
-            </li>
+                <li>
+                    <a href="#">
+                        项目列表
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        接口调试
+                    </a>
+                </li>
+                <li>
+                    <a href="/help/">
+                        帮助
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/" target="_blank">
+                        后台
+                    </a>
+                </li>
         </ul>
-
     </nav>
 
 <button id="menu_btn" onclick="display_menu()" style="margin-left: 220px;background-color: #353c48; color: white;border-radius: 0px 50px 50px 0px">
     隐藏
 </button>
 
-<a href="/home/">
-<button style="float: right;height: 35px;
-width: 100px;background-color: #353C48;
-color: white;border-radius: 0px 0px 0px 10px;font-size: large;">
-    🏡主页
-</button>
-</a>
+<div style="float: right;">
+    <a href="/home/">
+    <button style="float: right;height: 35px;
+    width: 100px;background-color: #353C48;
+    color: white;border-radius: 0px 0px 0px 0px;font-size: large;">
+        🏡主页
+    </button>
+    </a>
+    <br>
+    <a href="/logout/">
+    <button style="float: right;height: 35px;
+    width: 100px;background-color: #353C48;
+    color: white;border-radius: 0px 0px 0px 10px;font-size: large;">
+        退出
+    </button>
+    </a>
+</div>
 
 <script>
     function display_menu() {
@@ -91,6 +95,13 @@ color: white;border-radius: 0px 0px 0px 10px;font-size: large;">
 
 <script>
     $('#page1').load('/child/'+'{{ whichHTML }}/{{ oid }}/')
+</script>
+
+<script>
+    if( "{{ whichHTML }}" != 'Home.html' ){
+        document.getElementById('menu_btn').click()
+    }
+
 </script>
 </body>
 </html>
