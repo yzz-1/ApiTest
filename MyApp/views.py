@@ -77,6 +77,6 @@ def child_json(eid):
     if eid == 'Home.html':
         date = DB_home_href.objects.all()
 
-        res = {"href": date}
+        res = {"hrefs": date}
 
     return res
