@@ -74,9 +74,24 @@ def api_help(request):
 
 # 控制不同的页面返回不同的数据：数据分发器
 def child_json(eid):
+    res = {}
     if eid == 'Home.html':
         date = DB_home_href.objects.all()
-
         res = {"hrefs": date}
+    if eid == 'project_list.html':
+        date = DB_project.objects.all()
+        res = {"projects": date}
 
     return res
+
+# 进入项目列表
+def project_list(request):
+    return render(request, 'welcome.html', {"whichHTML": "project_list.html", "oid": ""})
+
+# 删除项目
+def delete_project(request):
+    id = request.GET['id']
+
+    DB_project.objects.filter(id=id).delete()
+
+    return HttpResponse('')
