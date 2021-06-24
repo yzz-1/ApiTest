@@ -6,9 +6,40 @@
 </head>
 <body>
 
-<div style="text-align: center">
-    <h2>接口库： <span style="color: #2f3238">{{ project_name }}</span></h2>
-</div>
+<nav class="navbar navbar-default" role="navigation" style="position: absolute;top: 0px;left: 80px;width:-webkit-calc(100% - 200px);z-index: 1">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span style="font-size: xx-small" class="navbar-brand" >项目名称：{{ project.name }}</span>
+            <a class="navbar-brand" href="/project_list/">返回项目列表</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/apis/{{ project.id }}/">接口库</a></li>
+                <li><a href="/cases/{{ project.id }}/">用例库</a></li>
+                <li><a href="/project_set/{{ project.id }}/">项目设置</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th> <th style="width: 50%">接口名称</th> <th style="width: 30%">url</th> <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in apis %}
+            <tr>
+                <td>{{ i.id }}</td><td>{{ i.name }}</td><td>{{ i.api_url }}</td> <td>
+                <button onclick="" class="btn btn-success">调试</button> <button onclick="" class="btn btn-danger">删除</button>
+            </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
 
 </body>
 </html>
