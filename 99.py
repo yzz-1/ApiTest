@@ -13,3 +13,18 @@ for i in range(1, len(k)):
         else:
             pass
 print(k)
+
+
+def Collatz():
+    num = input('请输入一个整数')
+    while int(num) != 1:
+        if int(num) % 2 == 0:
+            i = int(num) // 2
+            print(int(num) // 2)
+        elif int(num) % 2 == 1:
+            i = 3 * int(num) + 1
+            print(3 * int(num) + 1)
+        num = i
+
+if __name__ == '__main__':
+    Collatz()
