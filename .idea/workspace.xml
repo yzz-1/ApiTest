@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="034a60e1-3319-4342-a200-a120545ebdc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/css/htmleaf-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/fonts/icomoon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/fonts/icomoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/fonts/icomoon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/fonts/icomoon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/jQuery之家.url" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/js/bootstable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/readme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/related/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyApp/static/201801271505/related/2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyApp/templates/P_apis.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyApp/templates/P_apis.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +219,7 @@
       <workItem from="1624354542272" duration="77000" />
       <workItem from="1624435349831" duration="39864000" />
       <workItem from="1624844817893" duration="643000" />
-      <workItem from="1624845478565" duration="13474000" />
+      <workItem from="1624845478565" duration="15712000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1617959328892</created>
@@ -312,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624930039103</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="from-date35">
+      <created>1624961010493</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624961010493</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -392,7 +385,8 @@
     <MESSAGE value="33集" />
     <MESSAGE value="34集" />
     <MESSAGE value="代码漏提" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码漏提" />
+    <MESSAGE value="from-date35" />
+    <option name="LAST_COMMIT_MESSAGE" value="from-date35" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
